@@ -1,0 +1,8 @@
+# Crossref test fixtures contain citation reference keys (e.g. "key":"BFnature14539_CR1"),
+# which the generic-api-key rule misreads as secrets. They are public bibliographic ids.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public Crossref fixture reference keys"
+paths = ['''tests/fixtures/crossref_.*\.json''']

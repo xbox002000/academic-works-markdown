@@ -1,0 +1,162 @@
+{
+  "title": "Academic works input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "ids": {
+      "title": "DOI / PMID / arXiv ids",
+      "description": "DOIs (10.x/… or doi.org URLs), PubMed PMIDs, arXiv ids or URLs. One per line.",
+      "type": "array",
+      "editor": "stringList",
+      "prefill": [
+        "10.1038/nature14539",
+        "1706.03762",
+        "26017442"
+      ]
+    },
+    "queries": {
+      "title": "Keyword queries",
+      "description": "Optional free-text searches (OpenAlex by default; provider-specific otherwise).",
+      "type": "array",
+      "editor": "stringList"
+    },
+    "provider": {
+      "title": "Provider",
+      "description": "auto = best source per id type + OpenAlex enrichment.",
+      "type": "string",
+      "editor": "select",
+      "enum": [
+        "auto",
+        "crossref",
+        "openalex",
+        "pubmed",
+        "arxiv"
+      ],
+      "default": "auto"
+    },
+    "enrich": {
+      "title": "Enrich with OpenAlex",
+      "description": "Add citation counts / OA status via exact-id OpenAlex lookup.",
+      "type": "boolean",
+      "default": true
+    },
+    "includeAbstract": {
+      "title": "Include abstract",
+      "description": "",
+      "type": "boolean",
+      "default": true
+    },
+    "includeBibtex": {
+      "title": "Include BibTeX",
+      "description": "Generated from returned metadata only.",
+      "type": "boolean",
+      "default": true
+    },
+    "includeRagChunks": {
+      "title": "Write CHUNKS.jsonl",
+      "description": "",
+      "type": "boolean",
+      "default": true
+    },
+    "abstractMaxChars": {
+      "title": "Abstract max chars",
+      "description": "",
+      "type": "integer",
+      "default": 4000,
+      "minimum": 200,
+      "maximum": 50000
+    },
+    "maxAuthors": {
+      "title": "Max authors per card",
+      "description": "",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 2000
+    },
+    "searchLimit": {
+      "title": "Hits per query",
+      "description": "",
+      "type": "integer",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 50
+    },
+    "maxItems": {
+      "title": "Max cards",
+      "description": "Cap on total cards (0 = unlimited).",
+      "type": "integer",
+      "default": 50,
+      "minimum": 0
+    },
+    "maxConcurrency": {
+      "title": "Max concurrency",
+      "description": "",
+      "type": "integer",
+      "default": 2,
+      "minimum": 1,
+      "maximum": 5
+    },
+    "maxRetries": {
+      "title": "Max retries",
+      "description": "",
+      "type": "integer",
+      "default": 3,
+      "minimum": 0,
+      "maximum": 6
+    },
+    "requestTimeoutSecs": {
+      "title": "Request timeout (s)",
+      "description": "",
+      "type": "integer",
+      "default": 30,
+      "minimum": 5,
+      "maximum": 120
+    },
+    "contactEmail": {
+      "title": "Contact email (optional)",
+      "description": "Sent as mailto to Crossref/OpenAlex/NCBI polite pools. Defaults to a non-personal address.",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "openAlexApiKey": {
+      "title": "OpenAlex API key (optional)",
+      "description": "Your own OpenAlex key for higher quotas.",
+      "type": "string",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "ncbiApiKey": {
+      "title": "NCBI API key (optional)",
+      "description": "Your own NCBI E-utilities key (10 req/s).",
+      "type": "string",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "datasetId": {
+      "title": "Input dataset id",
+      "description": "Read ids/queries from a dataset.",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "idField": {
+      "title": "Id field",
+      "description": "Field name holding the id in dataset/KV items.",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "keyValueStoreId": {
+      "title": "Input KV store id",
+      "description": "",
+      "type": "string",
+      "editor": "textfield"
+    },
+    "keyValueRecordKey": {
+      "title": "KV record key",
+      "description": "",
+      "type": "string",
+      "editor": "textfield",
+      "default": "INPUT_WORKS"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "apify-actor-start": {
+    "eventTitle": "Actor start",
+    "eventDescription": "Charged once per run (Apify synthetic start event).",
+    "eventPriceUsd": 0.001
+  },
+  "work-card": {
+    "eventTitle": "Academic work card",
+    "eventDescription": "Charged once per SUCCESSFUL scholarly-work card (DOI / PMID / arXiv lookup or keyword search hit) with Identity, Authors, Abstract, Bibliometrics, Links, Source. Invalid input, not found, rate limits after retries and other failures are free.",
+    "eventPriceUsd": 0.004,
+    "isPrimaryEvent": true
+  }
+}

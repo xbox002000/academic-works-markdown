@@ -1,0 +1,6 @@
+.venv/
+storage/
+__pycache__/
+*.pyc
+test-results/
+notes/

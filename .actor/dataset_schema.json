@@ -1,0 +1,130 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "idType",
+          "inputRaw",
+          "title",
+          "year",
+          "venue",
+          "doi",
+          "pmid",
+          "arxivId",
+          "citedBy",
+          "isOA",
+          "landingUrl",
+          "source",
+          "status"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "idType": {
+            "label": "idType",
+            "format": "text"
+          },
+          "inputRaw": {
+            "label": "inputRaw",
+            "format": "text"
+          },
+          "title": {
+            "label": "title",
+            "format": "text"
+          },
+          "year": {
+            "label": "year",
+            "format": "text"
+          },
+          "venue": {
+            "label": "venue",
+            "format": "text"
+          },
+          "doi": {
+            "label": "doi",
+            "format": "text"
+          },
+          "pmid": {
+            "label": "pmid",
+            "format": "text"
+          },
+          "arxivId": {
+            "label": "arxivId",
+            "format": "text"
+          },
+          "citedBy": {
+            "label": "citedBy",
+            "format": "text"
+          },
+          "isOA": {
+            "label": "isOA",
+            "format": "text"
+          },
+          "landingUrl": {
+            "label": "landingUrl",
+            "format": "link"
+          },
+          "source": {
+            "label": "source",
+            "format": "text"
+          },
+          "status": {
+            "label": "status",
+            "format": "text"
+          }
+        }
+      }
+    },
+    "failed": {
+      "title": "Failed (not charged)",
+      "transformation": {
+        "fields": [
+          "inputRaw",
+          "idType",
+          "errorClass",
+          "httpStatus",
+          "attempts",
+          "errorMessage",
+          "hint"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "inputRaw": {
+            "label": "inputRaw",
+            "format": "text"
+          },
+          "idType": {
+            "label": "idType",
+            "format": "text"
+          },
+          "errorClass": {
+            "label": "errorClass",
+            "format": "text"
+          },
+          "httpStatus": {
+            "label": "httpStatus",
+            "format": "text"
+          },
+          "attempts": {
+            "label": "attempts",
+            "format": "text"
+          },
+          "errorMessage": {
+            "label": "errorMessage",
+            "format": "text"
+          },
+          "hint": {
+            "label": "hint",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}

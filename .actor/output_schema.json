@@ -1,0 +1,33 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Academic works output",
+  "description": "Dataset cards + REPORT.md, CHUNKS.jsonl, SUMMARY, OUTPUT.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Work cards",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "reportMarkdown": {
+      "type": "string",
+      "title": "REPORT.md",
+      "description": "Identity · Authors · Abstract · Bibliometrics · Links · Source",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/REPORT.md"
+    },
+    "chunks": {
+      "type": "string",
+      "title": "CHUNKS.jsonl",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/CHUNKS.jsonl"
+    },
+    "summary": {
+      "type": "string",
+      "title": "SUMMARY",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    },
+    "output": {
+      "type": "string",
+      "title": "OUTPUT",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+    }
+  }
+}

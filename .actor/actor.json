@@ -1,0 +1,28 @@
+{
+  "actorSpecification": 1,
+  "name": "academic-works-markdown",
+  "title": "DOI / PMID / arXiv → Academic Work Markdown",
+  "description": "Batch DOI, PubMed PMID and arXiv ids (+ optional keyword queries) → scholarly-work Markdown RAG cards + JSON from public Crossref, OpenAlex, PubMed E-utilities and arXiv APIs. Keyless; optional buyer API keys. Failed / not-found rows free. 256 MB.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "minMemoryMbytes": 128,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 256,
+    "timeoutSecs": 3600
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "changelog": "../CHANGELOG.md",
+  "categories": [
+    "AI",
+    "DEVELOPER_TOOLS",
+    "AUTOMATION"
+  ]
+}
